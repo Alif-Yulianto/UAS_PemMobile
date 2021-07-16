@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Biodata"
+        android:textAlignment="center"
+        android:textSize="15pt"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Nama"
+        android:layout_below="@id/judul"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/nameText"
+        android:ems="11" android:inputType="text" />
+
+    <TextView
+        android:id="@+id/umurText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="25dp"
+        android:text="Umur"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/umur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/umurText"
+        android:ems="12"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/univText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_below="@+id/umur"
+        android:layout_marginTop="25dp"
+        android:text="Universitas"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/univ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/univText"
+        android:ems="12"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/jeniskelaminText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gridLayout1"
+        android:layout_below="@+id/univ"
+        android:layout_marginTop="25dp"
+        android:text="Jenis kelamin"
+        android:textSize="10pt" />
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/umurText"
+        android:layout_below="@id/jeniskelaminText"
+        android:layout_marginTop="5dp">
+
+        <RadioGroup
+            android:id="@+id/jeniskelamin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/femaleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Perempuan"
+                android:textSize="7pt" />
+
+            <RadioButton
+                android:id="@+id/maleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Laki-laki"
+                android:textSize="7pt" />
+
+        </RadioGroup>
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/kirimdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/gridLayout1"
+        android:layout_marginTop="25dp"
+        android:text="Kirim Data" />
+
+</RelativeLayout>
